@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Student Management System</h1>
+
+    <form id="studentForm">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter name" required />
+      </div>
+      <div>
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="Enter age" required />
+      </div>
+      <div>
+        <label for="grade">Grade:</label>
+        <input type="text" id="grade" placeholder="Enter grade" required />
+      </div>
+      <button type="submit">Add Student</button>
+    </form>
+
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Grade</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <noscript>
+    <p style="color: red;">JavaScript is required to use this application. Please enable it in your browser settings.</p>
+  </noscript>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
